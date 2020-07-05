@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "750267933453",
+    "firebase_url": "https://hohaya-dd966.firebaseio.com",
+    "project_id": "hohaya-dd966",
+    "storage_bucket": "hohaya-dd966.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:750267933453:android:2047a275c3ca2bb76c8644",
+        "android_client_info": {
+          "package_name": "apps.coders4togo.hhaya"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "750267933453-1mtavg7ifvpvrf4rjf0cod519qqijrmg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuKTv9eDFffLAeRe6KcUfZP7UnVZsfTtw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "750267933453-1mtavg7ifvpvrf4rjf0cod519qqijrmg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
