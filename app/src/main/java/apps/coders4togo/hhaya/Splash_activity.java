@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 public class Splash_activity extends AppCompatActivity {
 
@@ -12,7 +13,21 @@ public class Splash_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash_activity);
 
-        Thread thread = new Thread () {
+
+        //Utilisation de Handler a la place de Thread
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run()
+            {
+                Intent AZE = new Intent (Splash_activity.this, StartActivity.class);
+                startActivity (AZE);
+                finish ();
+
+            }
+        },3000);
+
+      /*  Thread thread = new Thread () {
             @Override
             public void run() {
                 try {
@@ -28,18 +43,10 @@ public class Splash_activity extends AppCompatActivity {
         };
         thread.start ();
 
+       */
+
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy ();
-        finish ();
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause ();
-        finish ();
-    }
 
 }
