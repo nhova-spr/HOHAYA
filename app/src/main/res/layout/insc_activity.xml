@@ -7,4 +7,165 @@
     android:background="@drawable/bckgrd1"
     tools:context=".Insc_activity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:elevation="5dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:text="Inscription"
+        android:fontFamily="@font/gotham"
+        android:textColor="@color/White"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:transitionName="tvLogin"
+        app:layout_constraintBottom_toBottomOf="@+id/bgHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bgHeader"
+        tools:ignore="MissingConstraints" />
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        android:layout_below="@+id/bgHeader"
+        app:layout_constraintTop_toBottomOf="@+id/bgHeader">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="50dp">
+
+                   <com.google.android.material.textfield.TextInputLayout
+                       android:layout_width="match_parent"
+                       android:layout_marginRight="20dp"
+                       android:layout_marginLeft="20dp"
+                       android:layout_height="match_parent">
+
+                       <EditText
+                           android:id="@+id/user"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_marginTop="20dp"
+                           android:padding="15dp"
+                           android:hint="Nom d'utilisateur"
+                           android:inputType="text" />
+
+                   </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="match_parent">
+
+                        <EditText
+                            android:id="@+id/mail2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:hint="E-mail"
+                            android:layout_marginTop="20dp"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+
+                        <EditText
+                            android:id="@+id/password2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:hint="Mot de passe"
+                            android:layout_marginTop="20dp"
+                            android:inputType="textEmailAddress" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/cv"
+                android:layout_alignLeft="@+id/cv"
+                android:layout_alignRight="@+id/cv"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="-50dp"
+                android:layout_marginRight="35dp"
+                android:elevation="10dp">
+
+                <ProgressBar
+                    android:id="@+id/progressBar2"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/connet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bouton_primary"
+                    android:text="Inscription"
+                    android:fontFamily="@font/gotham"
+                    android:textAllCaps="false"
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/connet"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/bordure_bouton"
+                android:drawableLeft="@drawable/logofacebook"
+                android:fontFamily="@font/gotham"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="SE CONNECTER AVEC FACEBOOK"
+                android:textColor="@color/colorPrimary"
+                tools:ignore="NotSibling" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

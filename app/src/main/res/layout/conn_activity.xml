@@ -56,8 +56,10 @@
     <ScrollView
         android:id="@+id/sv"
         android:layout_width="match_parent"
-        android:layout_height="463dp"
+        android:layout_height="match_parent"
         android:layout_below="@+id/bgHeader"
+        android:layout_marginTop="190dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bgHeader"
         tools:layout_editor_absoluteX="-253dp">
 
@@ -76,22 +78,24 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:orientation="vertical"
                     android:paddingBottom="50dp">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
                         android:layout_height="wrap_content"
                         android:layout_margin="20dp">
 
-                           <EditText
-                               android:id="@+id/mail"
-                               android:layout_width="match_parent"
-                               android:layout_height="45dp"
-                               android:hint="E-mail"
-                               android:layout_marginLeft="10dp"
-                               android:layout_marginRight="10dp"
-                               android:inputType="textEmailAddress" />
+                        <EditText
+                            android:id="@+id/mail"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:hint="E-mail"
+                            android:inputType="textEmailAddress" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -99,6 +103,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="20dp"
                         android:layout_marginRight="20dp">
 
                         <EditText
@@ -106,8 +111,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="45dp"
                             android:layout_marginLeft="10dp"
-                            android:hint="Mot de passe"
                             android:layout_marginRight="10dp"
+                            android:hint="Mot de passe"
                             android:inputType="textPassword" />
 
                     </com.google.android.material.textfield.TextInputLayout>
@@ -132,11 +137,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bouton_primary"
-                    android:text="Connection"
                     android:fontFamily="@font/gotham"
-                    android:textSize="20sp"
+                    android:text="Connection"
                     android:textAllCaps="false"
-                    android:textColor="@color/White" />
+                    android:textColor="@color/White"
+                    android:textSize="20sp" />
 
                 <ProgressBar
                     android:id="@+id/progressBar"
@@ -173,8 +178,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:elevation="5dp"
-                android:text="Mot de passe oublié?"
                 android:fontFamily="@font/sofia_regular"
+                android:text="Mot de passe oublié?"
                 android:textSize="14sp" />
 
             <Button
@@ -188,8 +193,8 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="40dp"
                 android:background="@drawable/bordure_bouton"
-                android:fontFamily="@font/gotham"
                 android:drawableLeft="@drawable/logofacebook"
+                android:fontFamily="@font/gotham"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:text="SE CONNECTER AVEC FACEBOOK"
