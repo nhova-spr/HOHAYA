@@ -1,8 +1,13 @@
 package apps.coders4togo.hhaya;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,5 +17,44 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
+        bottomNav.setOnNavigationItemSelectedListener(navlistener);
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragmt_cont, new HomeFragment()).commit();
+
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navlistener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
+
+                    switch (item.getItemId()){
+                        case R.id.nav_home:
+                            selectedFragment = new HomeFragment();
+                            break;
+                        case R.id.search:
+                            selectedFragment = new SearchFragment();
+                            break;
+                        case R.id.add:
+                            selectedFragment = new AddFragment();
+                            break;
+                        case R.id.profile:
+                            selectedFragment = new ProfileFragment();
+                            break;
+                        case R.id.infos:
+                            selectedFragment = new InfosFragment();
+                            break;
+                    }
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmt_cont,selectedFragment).commit();
+
+                    return true;
+                }
+            };
+
+
 }
+
