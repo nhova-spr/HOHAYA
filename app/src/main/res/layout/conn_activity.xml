@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bckgrd1"
+    android:background="@color/Black"
     tools:context=".Conn_activity">
 
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/bgHeader"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="150dp"
         android:elevation="5dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
@@ -28,10 +28,10 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/tvLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.807"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -40,16 +40,16 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvDesc"
         android:layout_alignLeft="@+id/tvDesc"
-        android:layout_marginBottom="84dp"
-        android:text="Connection"
+        android:layout_marginBottom="44dp"
         android:fontFamily="@font/gotham"
+        android:text="Connexion"
         android:textColor="@color/White"
         android:textSize="30sp"
         android:textStyle="bold"
         android:transitionName="tvLogin"
         app:layout_constraintBottom_toBottomOf="@+id/bgHeader"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/bgHeader"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bgHeader"
         tools:layout_editor_absoluteX="-253dp">
@@ -179,10 +179,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cv"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="12dp"
+                android:textColor="@color/White"
                 android:elevation="5dp"
                 android:fontFamily="@font/sofia_regular"
-                android:text="Mot de passe oublié?"
+                android:text="Ou"
                 android:textSize="14sp" />
 
             <Button
@@ -192,7 +193,7 @@
                 android:layout_alignLeft="@+id/cv"
                 android:layout_alignRight="@+id/cv"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="40dp"
                 android:background="@drawable/bordure_bouton"
