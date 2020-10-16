@@ -7,4 +7,6 @@
     <color name="Black">#000000</color>
     <color name="Cendre1">#717171</color>
     <color name="Cendre2">#959595</color>
-    </resources>
+    <color name="line_color">#F4F4F8</color>
+    <color name="bg">#CA282B</color>
+</resources>
